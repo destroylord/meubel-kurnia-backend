@@ -1,0 +1,16 @@
+{
+    "name": "destroylord/meubel-kurnia-backend",
+    "description": "mini framework to make website creation easier",
+    "authors": [
+        {
+            "name": "destroylord",
+            "email": "masapin68@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "app\\":"./"
+        }
+    },
+    "require": {}
+}
