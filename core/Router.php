@@ -25,16 +25,36 @@ class Router
         $callback = $this->routes[$method][$path] ?? false;
 
         if ($callback === false) {
-            echo "404 Not Found";
+            Application::$app->response->setStatusCode(404);
+            return "404 Not Found";
             exit;
         } 
+        if (is_string($callback)) {
+            return $this->renderView($callback);
+        }
 
         echo call_user_func($callback);
-        
+    }
 
-        // echo '<pre>';
-        // var_dump($callback);
-        // echo '</pre>';
-        // exit;
+    public function renderView($view)
+    {
+        $layoutsContent = $this->layoutContent();
+        $viewContent    = $this->renderOnlyView($view);
+        return str_replace('{{content}}', $viewContent, $layoutsContent);
+    }
+    
+    protected function layoutContent()
+    {
+        ob_start();
+        // var_dump(Application::$ROOT_DIR);
+        include_once Application::$ROOT_DIR. "/views/layouts/main.php";
+        return ob_get_clean();
+    }
+
+    protected function renderOnlyView($view)
+    {
+        ob_start();
+        include_once Application::$ROOT_DIR. "/views/$view.php";
+        return ob_get_clean();
     }
 }
