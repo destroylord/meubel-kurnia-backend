@@ -48,8 +48,9 @@
   </div>
 </nav>
   
+<div class="container">
     {{content}}
-
+</div>
     <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: Bootstrap Bundle with Popper -->

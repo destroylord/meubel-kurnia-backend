@@ -1,7 +1,7 @@
 <?php
 
 use app\core\Application;
-
+use app\controllers\SiteController;
 
 $app = new Application(dirname(__DIR__));
 
@@ -12,8 +12,9 @@ $app->router->get('/', function(){
 //     return 'Contact';
 // });
 
-$app->router->get('/','welcome');
+$app->router->get('/',[SiteController::class, 'welcome']);
 $app->router->get('/books','books');
-$app->router->get('/contact','contact');
+$app->router->get('/contact', [SiteController::class, 'contact']);
+$app->router->post('/contact',[SiteController::class, 'handlerContact']);
 
 $app->run();
