@@ -3,13 +3,18 @@
 
 use app\core\Controller;
 use app\core\Request;
+use app\models\RegisterModel;
 
 class AuthController extends Controller
 {
+
+    public function __construct()
+    {
+        $this->setLayout('auth');
+    }
     
     public function login()
     {
-        $this->setLayout('auth');
         return $this->view('login');
     }
 
@@ -20,11 +25,29 @@ class AuthController extends Controller
 
     public function register(Request $request)
     {
+
+        $registerModel = new RegisterModel();
+
         if ($request->isPost()) {
-            return "Handle submitted data";
+
+            $registerModel->loadData($request->getBody());
+
+            if ($registerModel->validate() && $registerModel->register()) {
+                return 'success';
+            }
+
+            // echo '<pre>';
+            // var_dump($registerModel->errors);
+            // echo '</pre>';
+            // exit;
+
+            return $this->view('register', [
+                'model' => $registerModel
+            ]);
         }
-        $this->setLayout('auth');
-        return $this->view('register');
+        return $this->view('register', [
+            'model' => $registerModel
+        ]);
     }
 }
 
