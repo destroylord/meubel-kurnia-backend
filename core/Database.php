@@ -38,12 +38,13 @@ class Database
 
             echo "Applying migration $migration".PHP_EOL;
             $instance->up();
-            echo "AppLIED migration $migration".PHP_EOL;
+            echo "Applied migration $migration".PHP_EOL;
+            $newMigrations[] = $migration;
         
         }
 
-        if (!empty($newMigration)) {
-            $this->saveMigrations($newMigration);
+        if (!empty($newMigrations)) {
+            $this->saveMigrations($newMigrations);
         }else{
             $this->log("All migration are applied");
         }
@@ -67,6 +68,11 @@ class Database
     }
     public function saveMigrations(array $migrations)
     {
+        // echo "<pre>";
+        // var_dump($migrations);
+        // echo "</pre>";
+        // exit;
+
         $str = implode(",", array_map(fn($m) => "('$m')", $migrations));
         $statement = $this->pdo->prepare("INSERT INTO migrations (migration) VALUES 
             $str
