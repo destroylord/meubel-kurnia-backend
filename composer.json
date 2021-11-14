@@ -1,0 +1,5 @@
+{
+    "require": {
+        "emsifa/block": "^2.4"
+    }
+}
