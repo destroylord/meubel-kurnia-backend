@@ -1,5 +1,4 @@
-
-<!-- jQuery -->
+  <!-- jQuery -->
 <script src="../../public/assets/js/jquery.min.js"></script>
 <!-- Bootstrap -->
 <script src="../../public/assets/js/bootstrap.bundle.min.js"></script>
