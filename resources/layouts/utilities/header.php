@@ -21,4 +21,8 @@
 
     <!-- Custom Theme Style -->
     <link href="../../public/assets/css/custom.min.css" rel="stylesheet">
+
+    <!-- Data table  -->
+    <link href="../../public/assets/css/dataTables.bootstrap.min.css" rel="stylesheet">
+    <link href="../../public/assets/css/responsive.bootstrap.min.css" rel="stylesheet">
   </head>

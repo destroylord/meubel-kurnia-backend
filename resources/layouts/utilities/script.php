@@ -1,5 +1,7 @@
   <!-- jQuery -->
 <script src="../../public/assets/js/jquery.min.js"></script>
+<!-- parsley -->
+<script src="../../public/assets/js/parsley.min.js"></script>
 <!-- Bootstrap -->
 <script src="../../public/assets/js/bootstrap.bundle.min.js"></script>
 <!-- FastClick -->
@@ -11,3 +13,9 @@
 
 <!-- Custom Theme Scripts -->
 <script src="../../public/assets/js/custom.min.js"></script>
+
+<!-- Data tables -->
+<script src="../../public/assets/js/jquery.dataTables.min.js"></script>
+<script src="../../public/assets/js/dataTables.bootstrap.min.js"></script>
+<script src="../../public/assets/js/dataTables.responsive.min.js"></script>
+<script src="../../public/assets/js/responsive.bootstrap.js"></script>
