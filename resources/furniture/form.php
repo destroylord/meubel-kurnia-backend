@@ -8,14 +8,13 @@
     <div class="clearfix"></div>
     </div>
     <div class="x_content">
-
     <!-- start form for validation -->
-        <form action="<?=url()?>models/furniture/store.php" method="POST" autocomplete="off">
+        <form action="<?=url()?>models/furniture/store.php" method="POST" autocomplete="off" enctype="multipart/form-data">
             <div class="row">
                 <div class="col-md-6">
                     <div class="form-group">
                         <label for="">Foto Barang * :</label>
-                        <input type="file" id="" class="form-control" name="images" required />
+                        <input type="file" id="img-multiple" class="form-control" multiple name="images" required />
                         <small>Upload barang bisa melebihi dari 1 foto.</small>
                     </div>
                     <div class="form-group">
@@ -36,7 +35,7 @@
                                 $result = mysqli_query($conn,"SELECT * FROM categories_furniture");
 
                                 while ($data = mysqli_fetch_array($result)) {?>
-                                    <option><?= $data['nama']; ?></option>
+                                    <option value="<?=$data['id']?>"><?= $data['nama']; ?></option>
                                 <?php
                                     }
                                 ?>
