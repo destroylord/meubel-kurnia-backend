@@ -19,3 +19,6 @@
 <script src="../../public/assets/js/dataTables.bootstrap.min.js"></script>
 <script src="../../public/assets/js/dataTables.responsive.min.js"></script>
 <script src="../../public/assets/js/responsive.bootstrap.js"></script>
+
+<!-- Jquery mask for currency -->
+<script src="../../public/assets/js/jquery.mask.min.js"></script>

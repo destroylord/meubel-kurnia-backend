@@ -43,7 +43,7 @@
                                       <?php
                                       
                                         $no = 1;
-                                        $sql = "SELECT * FROM categories_furniture";
+                                        $sql = "SELECT * FROM categories_furniture ORDER BY created_at DESC";
                                         $result = mysqli_query($conn, $sql);
     
                                         while ($data = mysqli_fetch_array($result)) {?>

@@ -7,6 +7,10 @@
 
       <script>
         $(function(){
+        // Format Currency
+        $( '#price' ).mask('000.000.000', {reverse: true});
+
+        // funtion for insert category furniture
           $('#save').click(function(){
             var data = $('#demo-form').serialize();
             var name = $('#nama').val();

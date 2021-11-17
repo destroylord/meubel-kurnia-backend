@@ -44,7 +44,7 @@
                                           <?php
 
                                             $no = 1;
-                                            $sql = mysqli_query($conn, "SELECT * FROM furnitures ORDER BY id desc");
+                                            $sql = mysqli_query($conn, "SELECT * FROM furnitures ORDER BY created_at desc");
 
                                             while ($data = mysqli_fetch_array($sql)) {?>
 
