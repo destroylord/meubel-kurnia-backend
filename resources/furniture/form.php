@@ -21,11 +21,19 @@
                 <small>Upload barang bisa melebihi dari 1 foto.</small>
             </div>
             <div class="form-group">
+                <label for="">Kategori Furniture</label>
+                <select name="" id="" class="form-control">
+                    <option>Pilih option</option>
+                    <option value="">MM</option>
+                    <option value="">RPL</option>
+                </select>
+            </div>
+            <div class="form-group">
                 <label for="fullname">Harga Barang * :</label>
                 <input type="text" id="fullname" class="form-control" name="fullname" required />
             </div>
             <div class="form-group">
-                <label for="">Deskripsi Barang</label>
+                <label for="">Deskripsi Barang * :</label>
                 <textarea name="" id="" cols="30" rows="10" class="form-control"></textarea>
             </div>
             <div class="ln_solid"></div>

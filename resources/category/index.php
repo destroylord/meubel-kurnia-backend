@@ -27,7 +27,6 @@
                                           <a href="#" class="btn btn-success btn-sm" data-toggle="modal" data-target="#staticBackdrop">
                                           Tambah
                                           </a>
-
                                           <?php include_once 'component/modal.php'; ?>
                                       </p>
                             
@@ -36,18 +35,38 @@
                                             <tr>
                                               <th>No</th>
                                               <th>Nama</th>
+                                              <th>created at</th>
                                               <th rowspan="">Action</th>
                                             </tr>
                                           </thead>
                                         <tbody>
-                                            <tr>
+                                      <?php
+                                      
+                                        $no = 1;
+                                        $sql = "SELECT * FROM categories_furniture";
+                                        $result = mysqli_query($conn, $sql);
+    
+                                        while ($data = mysqli_fetch_array($result)) {?>
+                                          <tr>
+                                            <td><?= $no++; ?></td>
+                                            <td><?= $data['nama']; ?></td>
+                                            <td><?= $data['created_at']; ?></td>
+                                            <td>
+                                                <a href="" class="btn btn-warning btn-sm"><i class="fa fa-pencil"></i></a>
+                                                <a href="" onclick="return confirm('Apakah anda ingin menghapus data ini?')" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></a>
+                                              </td>
+                                          </tr>
+                                      <?php
+                                        }
+                                      ?>
+                                            <!-- <tr>
                                               <td>1</td>
                                               <td>Mas Apin</td>
                                               <td>
                                                 <a href="" class="btn btn-warning btn-sm"><i class="fa fa-pencil"></i></a>
                                                 <a href="" onclick="return confirm('Apakah anda ingin menghapus data ini?')" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></a>
                                               </td>
-                                            </tr>
+                                            </tr> -->
                                         </tbody>
                                       </table>
                                     </div>

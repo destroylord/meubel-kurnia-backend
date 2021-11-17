@@ -11,12 +11,12 @@
       <div class="modal-body">
         <form action="#" method="POST" id="demo-form" autocomplete="off">
             <label for="name">Name Category * :</label>
-            <input type="text" class="form-control is-invalid" name="name" id="name" data-parsley-id="20" required>
-            <ul class="parsley-errors-list filled" id="parsley-id-20"><li class="parsley-required">This value is required.</li></ul>
+            <input type="text" class="form-control" name="nama" id="nama" data-parsley-id="20" required>
+            <small class="text-danger" id="err"></small>
         </form>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-primary">Save</button>
+        <button type="submit" id="save" class="btn btn-primary">Save</button>
       </div>
     </div>
   </div>
