@@ -34,18 +34,43 @@
                                             <tr>
                                               <th>No</th>
                                               <th>Nama</th>
+                                              <th>Price</th>
+                                              <th>Deskripsi</th>
+                                              <th>Created_at</th>
                                               <th rowspan="">Action</th>
                                             </tr>
                                           </thead>
                                         <tbody>
-                                            <tr>
+                                          <?php
+
+                                            $no = 1;
+                                            $sql = mysqli_query($conn, "SELECT * FROM furnitures ORDER BY id desc");
+
+                                            while ($data = mysqli_fetch_array($sql)) {?>
+
+                                              <tr>
+                                                <td><?= $no++; ?></td>
+                                                <td><?= $data['name']; ?></td>
+                                                <td><?= $data['price']; ?></td>
+                                                <td><?= $data['descriptions']; ?></td>
+                                                <td><?= $data['created_at']; ?></td>
+                                                <td>
+                                                  <a href="" class="btn btn-warning btn-sm"><i class="fa fa-pencil"></i></a>
+                                                  <a href="<?=url()?>models/furniture/delete.php?id=<?=$data['id']?> " onclick="return confirm('Apakah anda ingin menghapus data ini?')" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></a>
+                                                </td>
+                                              </tr>
+
+                                            <?php
+                                              }
+                                            ?>
+                                            <!-- <tr>
                                               <td>1</td>
                                               <td>Mas Apin</td>
                                               <td>
                                                 <a href="" class="btn btn-warning btn-sm"><i class="fa fa-pencil"></i></a>
                                                 <a href="" onclick="return confirm('Apakah anda ingin menghapus data ini?')" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></a>
                                               </td>
-                                            </tr>
+                                            </tr> -->
                                         </tbody>
                                       </table>
                                     </div>

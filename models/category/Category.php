@@ -14,8 +14,6 @@ if ($conn->query($sql) === true) {
 
     $conn->error;
 }
-
-
 // echo json_encode([
 //     'status' => 200,
 //     'msg' => 'successfully created',

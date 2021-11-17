@@ -2,8 +2,8 @@
     <div class="x_title">
     <h2>Create Record Furniture <small></small></h2>
     <ul class="nav navbar-right panel_toolbox">
-        <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
-        </li>
+        <!-- <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+        </li> -->
     </ul>
     <div class="clearfix"></div>
     </div>
@@ -23,9 +23,15 @@
             <div class="form-group">
                 <label for="">Kategori Furniture</label>
                 <select name="" id="" class="form-control">
-                    <option>Pilih option</option>
-                    <option value="">MM</option>
-                    <option value="">RPL</option>
+                    <option disabled readonly >Pilih Option</option>
+                    <?php
+                        $result = mysqli_query($conn,"SELECT * FROM categories_furniture");
+
+                        while ($data = mysqli_fetch_array($result)) {?>
+                            <option><?= $data['nama']; ?></option>
+                        <?php
+                            }
+                        ?>
                 </select>
             </div>
             <div class="form-group">
