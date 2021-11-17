@@ -53,20 +53,12 @@
                                             <td><?= $data['created_at']; ?></td>
                                             <td>
                                                 <a href="" class="btn btn-warning btn-sm"><i class="fa fa-pencil"></i></a>
-                                                <a href="" onclick="return confirm('Apakah anda ingin menghapus data ini?')" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></a>
+                                                <a href="<?=url()?>models/category/delete.php?id=<?=$data['id']?> " onclick="return confirm('Apakah anda ingin menghapus data ini?')" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></a>
                                               </td>
                                           </tr>
                                       <?php
                                         }
                                       ?>
-                                            <!-- <tr>
-                                              <td>1</td>
-                                              <td>Mas Apin</td>
-                                              <td>
-                                                <a href="" class="btn btn-warning btn-sm"><i class="fa fa-pencil"></i></a>
-                                                <a href="" onclick="return confirm('Apakah anda ingin menghapus data ini?')" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></a>
-                                              </td>
-                                            </tr> -->
                                         </tbody>
                                       </table>
                                     </div>
