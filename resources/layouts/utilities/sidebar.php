@@ -2,12 +2,12 @@
   <div class="menu_section">
     <h3>General</h3>
     <ul class="nav side-menu">
-      <li><a><i class="fa fa-home"></i> Dashboard </a>
+      <li><a href="http://localhost:8080/resources/dashboard/#"><i class="fa fa-home"></i> Dashboard </a>
       </li>
-      <li><a><i class="fa fa-edit"></i> Feature <span class="fa fa-chevron-down"></span></a>
+      <li><a href="#"><i class="fa fa-edit"></i> Feature <span class="fa fa-chevron-down"></span></a>
         <ul class="nav child_menu">
-          <li><a href="form_advanced.html">Furniture</a></li>
-          <li><a href="form_validation.html">kategori</a></li>
+          <li><a href="<?=url()?>/resources/furniture/#">Furniture</a></li>
+          <li><a href="http://localhost:8080/resources/category/#">kategori</a></li>
         </ul>
       </li>
     </ul>

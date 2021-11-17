@@ -1,4 +1,5 @@
 <?php include_once '../layouts/utilities/header.php'; ?>
+<?php include_once $_SERVER['DOCUMENT_ROOT'].'/core/config.php'; ?>
 
   <body class="nav-md">
     <div class="container body">
