@@ -21,8 +21,7 @@
         move_uploaded_file($_FILES['images']['tmp_name'], $_SERVER['DOCUMENT_ROOT'].'/public/uploads/'.$xx);
         $sql = mysqli_query($conn, "INSERT INTO furnitures(name, images, price, descriptions, id_category_furniture,created_at) VALUES('$name', '$xx', '$price','$desc','$id_category','$time')");
 
-        $retVal = ($sql) ? "Berhasil" : "error" ;
-        echo $retVal;exit;
+        header("location:".url()."resources/furniture/create.php");exit;
     }
 
 ?>

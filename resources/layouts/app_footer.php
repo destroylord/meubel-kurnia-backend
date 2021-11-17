@@ -22,14 +22,14 @@
 
             if(name != "") {
 
-              var url = "<?=url()?>models/Category.php"
+              var url = "<?=url()?>models/category/store.php"
 
               $.ajax({
                 type: 'POST',
                 url: url,
                 data: data,
                 success: function(res) {
-                  // location.reload();
+                  location.reload();
                 },error: function (err) {
                   console.log(err);
                 }
