@@ -24,7 +24,7 @@
                               <div class="col-sm-12">
                                     <div class="card-box table-responsive">
                                       <p class="text-muted font-13 m-b-30">
-                                          <a href="#" class="btn btn-success btn-sm" data-toggle="modal" data-target="#staticBackdrop">
+                                          <a href="#" class="btn btn-success btn-sm add" data-toggle="modal" data-target="#staticBackdrop">
                                           Tambah
                                           </a>
                                           <?php include_once 'component/modal.php'; ?>
@@ -52,7 +52,7 @@
                                             <td><?= $data['nama']; ?></td>
                                             <td><?= $data['created_at']; ?></td>
                                             <td>
-                                                <a href="" class="btn btn-warning btn-sm"><i class="fa fa-pencil"></i></a>
+                                                <a href="javascript:void(0)" onclick="ButtonEdit(<?=$data['id']?>)" class="btn btn-warning btn-sm"><i class="fa fa-pencil"></i></a>
                                                 <a href="<?=url()?>models/category/delete.php?id=<?=$data['id']?> " onclick="return confirm('Apakah anda ingin menghapus data ini?')" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></a>
                                               </td>
                                           </tr>

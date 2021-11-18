@@ -10,14 +10,15 @@
       </div>
       <div class="modal-body">
         <form action="#" method="POST" id="demo-form" autocomplete="off">
+            <input type="hidden" name="id" id="id" value="">
             <label for="name">Name Category * :</label>
-            <input type="text" class="form-control" name="nama" id="nama" data-parsley-id="20" required>
+            <input type="text" class="form-control" name="nama" id="nama" value="" required>
             <small class="text-danger" id="err"></small>
-        </form>
       </div>
       <div class="modal-footer">
         <button type="submit" id="save" class="btn btn-primary">Save</button>
       </div>
+      </form>
     </div>
   </div>
 </div>

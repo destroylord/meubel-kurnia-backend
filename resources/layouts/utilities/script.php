@@ -1,7 +1,5 @@
   <!-- jQuery -->
 <script src="../../public/assets/js/jquery.min.js"></script>
-<!-- parsley -->
-<script src="../../public/assets/js/parsley.min.js"></script>
 <!-- Bootstrap -->
 <script src="../../public/assets/js/bootstrap.bundle.min.js"></script>
 <!-- FastClick -->
