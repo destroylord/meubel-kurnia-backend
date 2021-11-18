@@ -41,7 +41,7 @@
                         </div>
                     </div>
                     <div class="col-md-6">
-
+                        <img src="public/assets/img/bg-login.jpg" alt="">
                     </div>
                 </div>
             </div>

@@ -22,7 +22,7 @@
             },
             dataType: 'JSON',
             success: function(res) {
-              // location.reload();
+              location.reload();
             }
           })
         })
@@ -51,7 +51,7 @@
                 data: data,
                 dataType: "JSON",
                 success: function(res) {
-                  // location.reload();
+                  location.reload();
                 },error: function (err) {
                   console.log(err);
                 }
