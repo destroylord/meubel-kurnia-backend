@@ -10,7 +10,7 @@
         <div class="row">
             <div class="x_content">
               <div class="col-md-12 col-sm-12 ">
-                    <?php include_once 'form.php'; ?>
+                    <?php include_once 'form-create.php'; ?>
               </div>
             </div>
         </div>

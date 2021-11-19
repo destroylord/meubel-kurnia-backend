@@ -55,12 +55,12 @@
                                                 <td><?= $data['descriptions']; ?></td>
                                                 <td><?= $data['created_at']; ?></td>
                                                 <td class="d-flex justfy-content-start">
-                                                  <a href="" class="btn btn-warning btn-sm"><i class="fa fa-pencil"></i></a>
-                                                <form action="<?=url()?>models/furniture/delete.php" method="POST">
-                                                    <input type="hidden" name="delete_id" value="<?= $data['id']?>">
-                                                    <input type="hidden" name="delete_images" value="<?= $data['images']?>">
-                                                    <button type="submit" name="delete_images_furniture" onclick="return confirm('Apakah anda yakin ingin menghapus data ini?')" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></button>
-                                                </form>
+                                                  <a href="<?=url()?>resources/furniture/edit.php?id=<?=$data['id'];?>" class="btn btn-warning btn-sm"><i class="fa fa-pencil"></i></a>
+                                                  <form action="<?=url()?>models/furniture/delete.php" method="POST">
+                                                      <input type="hidden" name="delete_id" value="<?= $data['id']?>">
+                                                      <input type="hidden" name="delete_images" value="<?= $data['images']?>">
+                                                      <button type="submit" name="delete_images_furniture" onclick="return confirm('Apakah anda yakin ingin menghapus data ini?')" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></button>
+                                                  </form>
                                                 </td>
                                               </tr>
 
