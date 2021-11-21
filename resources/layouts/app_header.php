@@ -15,11 +15,11 @@
             <!-- menu profile quick info -->
             <div class="profile clearfix">
               <div class="profile_pic">
-                <img src="images/img.jpg" alt="..." class="img-circle profile_img">
+                <img src="https://avatars.dicebear.com/api/initials/:<?=$_SESSION['username']?>.svg" alt="..." class="img-circle profile_img">
               </div>
               <div class="profile_info">
                 <span>Welcome,</span>
-                <h2> <?= $_SESSION['user']; ?></h2>
+                <h2> <?= $_SESSION['username']; ?></h2>
               </div>
             </div>
             <!-- /menu profile quick info -->
