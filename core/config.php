@@ -1,5 +1,8 @@
 <?php
 
+// open session
+session_start();
+
 // Connection
 $conn = mysqli_connect("localhost", "root", "", "mebel_kurnia");
 

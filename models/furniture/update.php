@@ -7,7 +7,7 @@
     $category       = $_POST['id_category_furniture'];
     $desc           = $_POST['descriptions'];
     $price          = $_POST['price'];
-    $time           = date("");
+    $time           = date("Y-m-d H:i:s");
 
     if (isset($_FILES['images']['name']) && ($_FILES['images']['name'] != '')) {
         $temp   = $_FILES['images']['tmp_name'];

@@ -1,3 +1,7 @@
+<?php
+    include_once $_SERVER['DOCUMENT_ROOT'].'/core/config.php';
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -28,21 +32,21 @@
                 <div class="row">
                     <div class="col-lg-4 col-md-6 col-sm-12 mx-auto" style="margin-top: 200px;">
                         <h2 class="text-center mb-4">Login</h2>
-                        <div class="form-group">
-                            <label>Nama Pengguna</label>
-                            <input type="text" name="" id="" class="form-control">
-                        </div>
-                        <div class="form-group">
-                            <label>Password</label>
-                            <input type="password" name="" id="" class="form-control">
-                        </div>
-                        <div class="form-group">
-                            <button type="submit" class="btn btn-nyaman w-100 mt-4">Login</button>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <img src="public/assets/img/bg-login.jpg" alt="">
-                    </div>
+                    <form action="<?=url()?>models/auth/login.php" method="POST" autcomplete="off">
+                                <div class="form-group">
+                                    <label>Nama Pengguna</label>
+                                    <input type="text" name="username" id="" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label>Password</label>
+                                    <input type="password" name="password" id="" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <button type="submit" class="btn btn-nyaman w-100 mt-4">Login</button>
+                                </div>
+                            </div>
+                     </form>
+                    <img src="public/assets/img/bg-login.jpg" alt="">
                 </div>
             </div>
         </div>
