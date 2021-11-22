@@ -25,4 +25,7 @@
     <!-- Data table  -->
     <link href="../../public/assets/css/dataTables.bootstrap.min.css" rel="stylesheet">
     <link href="../../public/assets/css/responsive.bootstrap.min.css" rel="stylesheet">
+
+    <!-- oastrjs -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
   </head>

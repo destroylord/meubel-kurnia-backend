@@ -20,3 +20,6 @@
 
 <!-- Jquery mask for currency -->
 <script src="../../public/assets/js/jquery.mask.min.js"></script>
+
+<!-- tostr javascript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
