@@ -12,7 +12,7 @@
       </li>
       <li><a href="javascript:void(0)"><i class="fa fa-book"></i> Laporan <span class="fa fa-chevron-down"></span></a>
         <ul class="nav child_menu">
-          <li><a href="<?=url()?>resources/furniture/#">Pembeli</a></li>
+          <li><a href="<?=url()?>resources/customer/index.php">Pembeli</a></li>
         </ul>
       </li>
     </ul>
