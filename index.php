@@ -13,6 +13,9 @@
     <!-- Bootstrap -->
     <link href="public/assets/css/bootstrap.min.css" rel="stylesheet">
 
+    <!-- toastrjs -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
+
     <style>
         .btn-nyaman {
             background-color: #464F9E;
@@ -55,5 +58,14 @@
     <script src="public/assets/js/jquery.min.js"></script>
     <!-- Bootstrap -->
    <script src="public/assets/js/bootstrap.bundle.min.js"></script>
+
+    <!-- tostr javascript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+
+    <script>
+        <?php if(isset($_SESSION['msg'])): ?>
+            toastr.info("<?=flash_message('msg')?>");
+        <?php endif ?>
+    </script>
 </body>
 </html>

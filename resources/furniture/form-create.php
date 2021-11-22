@@ -9,7 +9,7 @@
     </div>
     <div class="x_content">
     <!-- start form for validation -->
-        <form action="<?=url()?>models/furniture/update.php" method="POST" autocomplete="off" enctype="multipart/form-data">
+        <form action="<?=url()?>models/furniture/store.php" method="POST" autocomplete="off" enctype="multipart/form-data">
             <div class="row">
                 <div class="col-md-6">
                     <div class="form-group">

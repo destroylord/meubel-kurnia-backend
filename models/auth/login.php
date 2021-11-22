@@ -21,9 +21,11 @@ include_once $_SERVER['DOCUMENT_ROOT'].'/core/config.php';
 
             header("location:".url()."resources/dashboard/index.php");
         }else {
-            echo "<script>alert('Password invalid')</script>";
+            header("location:".url()."index.php");
+            flash_message("Gagal", "Password Invalid");
         }
     } else {
+        // echo flash_message("Gagal", "Akun Tidak ditemukan atau tidak cocok");
         echo "<script>alert('Akun Tidak ditemukan atau tidak cocok')</script>";
     }
 ?>
