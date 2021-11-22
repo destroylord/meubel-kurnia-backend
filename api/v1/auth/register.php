@@ -9,9 +9,10 @@ if (isset($_POST['username']) && isset($_POST['handphone']) && isset($_POST['pas
     $username       = $_POST['username'];
     $no_handphone   = $_POST['handphone'];
     $password       = password_hash($_POST['password'], PASSWORD_DEFAULT, ['cost' => 10]);
+    $token = bin2hex(random_bytes(16));
     // $time           = date("now");
 
-    $sql = "INSERT INTO users(username, password, handphone, photo_profile, token, created_at) VALUES('$username', '$password', '$no_handphone', NULL, NULL, '2021-11-22 10:22:35')";
+    $sql = "INSERT INTO users(username, password, handphone, photo_profile, token, role, created_at) VALUES('$username', '$password', '$no_handphone', NULL, '$token', 2, '2021-11-22 10:22:35')";
     $ex  = mysqli_query($conn, $sql);
 
 

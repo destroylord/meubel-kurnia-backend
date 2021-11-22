@@ -12,7 +12,7 @@ include_once $_SERVER['DOCUMENT_ROOT'].'/core/config.php';
 
     $hash = $fetch['password'];
 
-    if ($fetch) {
+    if ($fetch['role'] == 1) {
         if (password_verify($password, $fetch['password'])) {
 
             $_SESSION['username']   = $username;
@@ -24,6 +24,6 @@ include_once $_SERVER['DOCUMENT_ROOT'].'/core/config.php';
             echo "<script>alert('Password invalid')</script>";
         }
     } else {
-        echo "<script>alert('Akun Tidak ditemukan')</script>";
+        echo "<script>alert('Akun Tidak ditemukan atau tidak cocok')</script>";
     }
 ?>
