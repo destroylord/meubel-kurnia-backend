@@ -7,14 +7,14 @@
 
       <script>
           // update
-        $(document).on("submit","#demo-form", function(e){
+        $(document).on("click","#update", function(e){
           e.preventDefault();
 
           var id = $('#id').val();
           var nama = $('#nama').val();
 
           $.ajax({
-            method: "POST",
+            type: "POST",
             url : "<?=url()?>models/category/update.php",
             data: {
               id: id,
@@ -22,52 +22,59 @@
             },
             dataType: 'JSON',
             success: function(res) {
-              location.reload();
+              // location.reload();
+              toastr.success(res.msg, res.title)
             }
           })
         })
 
 
         $(function(){
-        // Format Currency
-        $( '#price' ).mask('000.000.000', {reverse: true});
+          // Format Currency
+          $( '#price' ).mask('000.000.000', {reverse: true});
 
-        // funtion for insert category furniture
-        $('#save').click(function(e){
 
-            var data = $('#demo-form').serialize();
-            var name = $('#nama').val();
-            var url = "<?=url()?>models/category/store.php"
+          // funtion for insert category furniture
+          $(document).on("click","#save",function(e){
 
-            // Validation
-            if (name == "") {
-              $('#err').html('Nama Harus di isi');
-            }
+              e.preventDefault();
+              var name = $('#nama').val();
+              var url = "<?=url()?>models/category/store.php"
 
-            if(name != "") {
-              $.ajax({
-                type: 'POST',
-                url: url,
-                data: data,
-                dataType: "JSON",
-                success: function(res) {
-                  location.reload();
-                },error: function (err) {
-                  console.log(err);
-                }
-              });
-            }
-        });
+              // Validation
+              if (name == "") {
+                $('#err').html('Nama Harus di isi');
+              }
 
+              if(name != "") {
+                $.ajax({
+                  type: 'POST',
+                  url: url,
+                  data: {
+                    nama: name
+                  },
+                  dataType: "JSON",
+                  success: function(res) {
+                    $('.modal').modal("hide");
+                    toastr.success(res.msg, res.title);
+                  },error: function (err) {
+                    console.log(err);
+                  }
+                });
+              }
+          });
         }); 
 
-        function ButtonEdit(id) {
-
+        function ButtonEdit(id) {          
           var url = "<?=url()?>models/category/update.php";
 
-          $('.modal').modal('show')
-          $('.modal-title').html('Edit Category')
           $('#demo-form').attr("action", url)
+          $(".modal-title").html("Edit Category")
+          $(".edit").html("Update")
+          $("#save").attr("id", "update");
+          
+          $(".modal").modal("show")
+
 
           $.ajax({
             type: "GET",
@@ -80,9 +87,6 @@
             }
           })
         }
-
-        
-
 
       </script>
   </body>

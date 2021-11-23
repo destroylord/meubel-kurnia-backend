@@ -29,20 +29,23 @@
     function update_data($conn, $id){
 
         $nama = $_POST['nama'];
+        $time = date("Y-m-d H:i:s");
 
-        $sql = "UPDATE categories_furniture SET nama = '$nama'
+        $sql = "UPDATE categories_furniture SET nama = '$nama', created_at = '$time'
                 WHERE id = '$id'";
 
-            if ($conn->query($sql) === true) {
-                echo json_encode([
-                    'status' => 200,
-                    'msg' => 'successfully updated',
-                ]);
-            } else {
-                echo "gagal";
+        $ex = mysqli_query($conn, $sql);
 
-                $conn->error;
-            }
+        if ($ex) {
+            echo json_encode([
+                'status' => 200,
+                'title' => 'Berhasil',
+                'msg' => 'successfully updated',
+            ]);
+        } else {
+            echo "gagal update data";
+        }
+        
         
     }
 

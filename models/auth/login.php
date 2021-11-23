@@ -4,6 +4,10 @@ include_once $_SERVER['DOCUMENT_ROOT'].'/core/config.php';
 
     $username = $_POST['username'];
     $password = $_POST['password'];
+    
+    /** 
+     * Form validation
+    */
 
     $sql = "SELECT * FROM users WHERE username = '$username'";
     $execute = mysqli_query($conn, $sql);

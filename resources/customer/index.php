@@ -28,15 +28,15 @@
                                           <thead>
                                             <tr>
                                               <th>No</th>
-                                              <th>User</th>
-                                              <th>Checkout</th>
+                                              <th>Kode</th>
+                                              <th>Nama</th>
+                                              <th>Alamat</th>
+                                              <th>Total Harga</th>
                                               <th rowspan="">Action</th>
                                             </tr>
                                           </thead>
                                         <tbody>
                                           <?php
-
-                                          echo $_SERVER['PHP_SELF'];
 
                                             $no = 1;
                                             $sql = mysqli_query($conn, "SELECT * FROM orders ORDER BY created_at desc");

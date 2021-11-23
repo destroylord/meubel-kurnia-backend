@@ -10,7 +10,8 @@ $sql = "INSERT INTO categories_furniture (nama, created_at) VALUES('$name', '$ti
 if ($conn->query($sql) === true) {
     echo json_encode([
         'status' => 200,
-        'msg' => 'successfully created',
+        'title' => 'Berhasil',
+        'msg'   => 'successfully created',
     ]);
 } else {
     echo "gagal";

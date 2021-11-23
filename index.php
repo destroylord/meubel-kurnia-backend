@@ -1,5 +1,6 @@
 <?php
     include_once $_SERVER['DOCUMENT_ROOT'].'/core/config.php';
+    
 ?>
 
 <!DOCTYPE html>
@@ -39,10 +40,12 @@
                                 <div class="form-group">
                                     <label>Nama Pengguna</label>
                                     <input type="text" name="username" id="" class="form-control">
+                                    <!-- <span class="text-danger"><?= $errors['username']; ?></span> -->
                                 </div>
                                 <div class="form-group">
                                     <label>Password</label>
                                     <input type="password" name="password" id="" class="form-control">
+                                    <!-- <span class="text-danger"><?= $errors['password']; ?></span> -->
                                 </div>
                                 <div class="form-group">
                                     <button type="submit" class="btn btn-nyaman w-100 mt-4">Login</button>

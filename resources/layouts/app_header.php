@@ -1,10 +1,11 @@
 <?php include_once '../layouts/utilities/header.php'; ?>
 <?php include_once $_SERVER['DOCUMENT_ROOT'].'/core/config.php'; ?>
 
-<?php 
+
+<?php
   if (!isset($_SESSION['username'])) {
     header("location:".url()."index.php");
-  }
+}
 ?>
 
   <body class="nav-md">

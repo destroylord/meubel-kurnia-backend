@@ -1,5 +1,5 @@
 <!-- Modal -->
-<div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+<div class="modal m-edit fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
@@ -9,14 +9,14 @@
         </button>
       </div>
       <div class="modal-body">
-        <form action="#" method="POST" id="demo-form" autocomplete="off">
+        <form action="#" method="POST" id="demo-form-edit" autocomplete="off">
             <input type="hidden" name="id" id="id" value="">
             <label for="name">Name Category * :</label>
             <input type="text" class="form-control" name="nama" id="nama" value="" required>
             <small class="text-danger" id="err"></small>
       </div>
       <div class="modal-footer">
-        <button type="submit" id="save" class="btn btn-primary edit">Save</button>
+        <button type="submit" id="save" class="btn btn-primary">Save</button>
       </div>
       </form>
     </div>
