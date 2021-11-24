@@ -17,7 +17,8 @@
                         <label for="">Foto Barang * :</label><br>
                         <input type="hidden" name="id" value="<?=$data['id'];?>">
                         <img src="<?= url()."public/uploads/".$data['images']?>" class="mb-2" style="backgroud-position: center" alt="Foto" width="300px" height="300px">
-                        <input type="file" id="img-multiple" class="form-control" name="images" value="<?= $data['images']?>" />
+                        <input type="file" name="images" id="img-multiple" class="form-control" value="<?= $data['images']?>" />
+                        <input type="text" name="old-images" value="<?=$data['images']?>">
                         <small>Upload barang bisa melebihi dari 1 foto.</small>
                     </div>
                     <div class="form-group">
@@ -61,7 +62,7 @@
             <div class="item form-group">
                 <div class="col-md-6 col-sm-6">
                     <button class="btn btn-primary" type="reset">Reset</button>
-                    <button type="submit" class="btn btn-success">Submit</button>
+                    <button type="submit" name="updated" class="btn btn-success">Submit</button>
                 </div>
             </div>
         </form>
