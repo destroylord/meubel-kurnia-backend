@@ -5,7 +5,6 @@
     if (isset($_POST['updated'])) {
 
         $root = $_SERVER['DOCUMENT_ROOT'];
-        // $root = url();
        
 
         $id             = $_POST['id'];

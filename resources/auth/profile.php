@@ -28,12 +28,13 @@
                     <h2>User Report <small>Activity report</small></h2>
                     <div class="clearfix"></div>
                   </div>
+
                   <div class="x_content">
                     <div class="col-md-3 col-sm-3  profile_left">
                       <div class="profile_img">
                         <div id="crop-avatar">
                           <!-- Current avatar -->
-                          <img class="img-responsive avatar-view" src="https://avatars.dicebear.com/api/initials/:<?=$_SESSION['username']?>.svg" alt="Avatar" title="Change the avatar">
+                          <img class="img-responsive avatar-view" src="https://avatars.dicebear.com/api/initials/:<?=$ass['username']?>.svg" alt="Avatar" title="Change the avatar">
                         </div>
                       </div>
 
@@ -45,29 +46,42 @@
                           <h2>User Activity Report</h2>
                         </div>
                       </div>
-                        
 
-                        <div class="mt-4">
-                            <div class="form-group">
-                                <label for="">Nama Lengkap</label>
-                                <input type="text" value="<?= $_SESSION['username']?>" class="form-control">
-                            </div>
-                            <div class="form-group">
-                                <label for="">No Hanphone</label>
-                                <input type="text" value="<?= $_SESSION['handphone']?>" class="form-control">
-                            </div>
+                      <?php 
 
-                            <hr>
-                            
-                            <h5>Change Password</h5>
+                      	if(isset($_SESSION['error'])) {
 
-                            <label for="">New Password</label>
-                            <input type="password" class="form-control w-50">
+                          ?>
+                          <div class="alert alert-warning" role="alert">
+                            <?php echo $_SESSION['error']?>
+                          </div>
+                          <?php
+                          } 
+                      ?>
+                    <form action="<?=url()?>models/auth/update-profile.php" method="POST">
+                          <div class="mt-4">
+                              <div class="form-group">
+                                  <input type="hidden" class="form-control" name="id" value="<?=$_SESSION['id']?>">
+                                  <label for="">Username</label>
+                                  <input type="text" value="<?= $ass['username']?>" class="form-control" name="username">
+                              </div>
+                              <div class="form-group">
+                                  <label for="">No Hanphone</label>
+                                  <input type="number" value="<?= $ass['handphone']?>" class="form-control" name="handphone">
+                              </div>
 
-                            <hr>
+                              <hr>
+                              
+                              <h5>Change Password</h5>
 
-                            <button type="submit" class="btn btn-success btn-sm"><i class="fa fa-pencil"></i>  Perbarui</button>
-                        </div>
+                              <label for="">New Password</label>
+                              <input type="password" class="form-control w-50" name="password" value="">
+
+                              <hr>
+
+                              <button type="submit" class="btn btn-success btn-sm"><i class="fa fa-pencil"></i>  Perbarui</button>
+                          </div>
+                        </form>
                     </div>
                   </div>
                 </div>
@@ -75,5 +89,6 @@
             </div>
           </div>
         </div>
+        <?php unset($_SESSION['error']); ?>
         <!-- /page content -->
 <?php include_once '../layouts/app_footer.php'; ?>

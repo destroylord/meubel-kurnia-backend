@@ -22,6 +22,7 @@ include_once $_SERVER['DOCUMENT_ROOT'].'/core/config.php';
             $_SESSION['username']   = $username;
             $_SESSION['handphone']  = $fetch['handphone'];
             $_SESSION['photo']      = $fetch['photo_profile'];
+            $_SESSION['id']         = $fetch['id'];
 
             header("location:".url()."resources/dashboard/index.php");
         }else {

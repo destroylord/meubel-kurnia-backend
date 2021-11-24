@@ -6,7 +6,16 @@
   if (!isset($_SESSION['username'])) {
     header("location:".url()."index.php");
 }
+
 ?>
+
+<?php
+      $sql = "SELECT * FROM users WHERE id = '$_SESSION[id]' ";
+      $ex = mysqli_query($conn, $sql);
+
+      $ass = mysqli_fetch_assoc($ex);
+  ?>
+
 
   <body class="nav-md">
     <div class="container body">
@@ -22,11 +31,11 @@
             <!-- menu profile quick info -->
             <div class="profile clearfix">
               <div class="profile_pic">
-                <img src="https://avatars.dicebear.com/api/initials/:<?=$_SESSION['username']?>.svg" alt="..." class="img-circle profile_img">
+                <img src="https://avatars.dicebear.com/api/initials/:<?=$ass['username']?>.svg" alt="..." class="img-circle profile_img">
               </div>
               <div class="profile_info">
                 <span>Welcome,</span>
-                <h2> <?= $_SESSION['username']; ?></h2>
+                <h2> <?= $ass['username']; ?></h2>
               </div>
             </div>
             <!-- /menu profile quick info -->
