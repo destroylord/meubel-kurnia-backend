@@ -9,18 +9,7 @@
     $price          = $_POST['price'];
     $time           = date("Y-m-d H:i:s");
 
-    if (isset($_FILES['images']['name']) && ($_FILES['images']['name'] != '')) {
-        $temp   = $_FILES['images']['tmp_name'];
-        $img    = $_FILES['images']['name'];
-
-        // delete old image from folder
-        unlink($_SERVER['DOCUMENT_ROOT']."/public/uploads/$old_images");
-
-        // new image upload
-        move_uploaded_file($temp, $_SERVER["DOCUMENT_ROOT"]."/public/uploads/".$img);
-    } else {
-        $img = $old_images;
-    }
+    $img            = $_FILES['images']['name'];
 
     $sql = "UPDATE furnitures SET name = '$name' , images = '$img',  price = '$price' , descriptions = '$desc', id_category_furniture = '$category', updated_at = '$time' WHERE id = '$id'";
 

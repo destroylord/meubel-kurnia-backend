@@ -18,7 +18,6 @@
                         <input type="hidden" name="id" value="<?=$data['id'];?>">
                         <img src="<?= url()."public/uploads/".$data['images']?>" class="mb-2" style="backgroud-position: center" alt="Foto" width="300px" height="300px">
                         <input type="file" id="img-multiple" class="form-control" name="images" value="<?= $data['images']?>" />
-                        <input type="hidden" name="images-old" value="<?=$data['images']?>">
                         <small>Upload barang bisa melebihi dari 1 foto.</small>
                     </div>
                     <div class="form-group">
@@ -52,7 +51,7 @@
                     </div>
                     <div class="form-group">
                         <label for="">Harga Barang * :</label>
-                        <input type="text" id="price" class="form-control" name="price" value="<?=$data['price']?>" required />
+                        <input type="text" id="price" class="form-control" name="price" value="<?=$fetch['price']?>" required />
                     </div>
                 </div>
             </div>

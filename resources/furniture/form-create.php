@@ -12,9 +12,10 @@
         <form action="<?=url()?>models/furniture/store.php" method="POST" autocomplete="off" enctype="multipart/form-data">
             <div class="row">
                 <div class="col-md-6">
+                    <img id="blah" class="mb-4" src="<?=url()?>/public/assets/img/nopreview.png" alt="Default Photos" width="200" height="200" >
                     <div class="form-group">
                         <label for="">Foto Barang * :</label>
-                        <input type="file" id="img-multiple" class="form-control" name="images" required />
+                        <input type="file" id="imgInp" class="form-control" name="images" required accept="image/*" />
                         <small>Upload barang bisa melebihi dari 1 foto.</small>
                     </div>
                     <div class="form-group">

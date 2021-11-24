@@ -33,6 +33,7 @@
                                           <thead>
                                             <tr>
                                               <th>No</th>
+                                              <th>Images</th>
                                               <th>Nama</th>
                                               <th>Price</th>
                                               <th>Deskripsi</th>
@@ -50,8 +51,9 @@
 
                                               <tr>
                                                 <td><?= $no++; ?></td>
+                                                <td><img src="<?=url()?>/public/uploads/<?=$data['images']?>" width="150" height="150" alt=""></td>
                                                 <td><?= $data['name']; ?></td>
-                                                <td><?= $data['price']; ?></td>
+                                                <td>Rp.<?= $data['price']; ?></td>
                                                 <td><?= $data['descriptions']; ?></td>
                                                 <td><?= $data['created_at']; ?></td>
                                                 <td class="d-flex justfy-content-start">
