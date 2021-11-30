@@ -1,6 +1,6 @@
 <div align="center">
   <a href="https://github.com/destroylord/meubel-kurnia-backend">
-    <img src="public/img/logo.webp" alt="Logo" width="80" height="80">
+    <img src="public/assets/img/logo.webp" alt="Logo" width="80" height="80">
   </a>
 
   <h3 align="center">Mebel Kurnia</h3>
@@ -21,7 +21,7 @@
 
 ## About Project
 
-[![Product Name Screen Shot][product-screenshot]](https://github.com/destroylord/meubel-kurnia-backend/public/img/Dashboard-admin.png)
+[![Product Name Screen Shot][product-screenshot]](https://github.com/destroylord/meubel-kurnia-backend/public/assets/img/Dashboard-admin.png)
 Mebel Kurnia adalaha aplikasi pemesanan mebel di yang berada di Bondowoso. Semua mebel yang diperlukan tersedia diaplikasi ini.
 
 ## Tech Stack
