@@ -21,7 +21,7 @@
 
 ## About Project
 
-[![Product Name Screen Shot][product-screenshot]](https://github.com/destroylord/meubel-kurnia-backend/public/assets/img/Dashboard-admin.png)
+[![Product Name Screen Shot][product-screenshot]](https://github.com/destroylord/meubel-kurnia-backend/blob/master/public/assets/img/Dashboard-admin.png)
 Mebel Kurnia adalaha aplikasi pemesanan mebel di yang berada di Bondowoso. Semua mebel yang diperlukan tersedia diaplikasi ini.
 
 ## Tech Stack
