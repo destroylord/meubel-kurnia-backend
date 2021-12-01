@@ -4,7 +4,7 @@
 session_start();
 
 // Connection
-$conn = mysqli_connect("localhost", "u8895984_mebel_kurnia_root", "iOo(uv?{yooa", "u8895984_mebel_kurnia");
+$conn = mysqli_connect("localhost", "root", "", "mebel_kurnia");
 
 // url
 function url()

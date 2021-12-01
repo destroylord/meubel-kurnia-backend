@@ -8,7 +8,7 @@
   <p align="center">
     An awesome README template to jumpstart your projects!
     <br />
-    <a href="https://github.com/othneildrew/Best-README-Template"><strong>Explore the docs API»</strong></a>
+    <a href="https://github.com/destroylord/meubel-kurnia-backend/wiki/Docs-API"><strong>Explore the docs API»</strong></a>
     <br />
     <br />
     <a href="http://mebel-kurnia.evoindo.xyz/">View Demo</a>
@@ -21,7 +21,7 @@
 
 ## About Project
 
-[![Product Name Screen Shot][product-screenshot]](https://github.com/destroylord/meubel-kurnia-backend/blob/master/public/assets/img/Dashboard-admin.png)
+![Image Preview](public/assets/img/Dashboard-admin.png)
 Mebel Kurnia adalaha aplikasi pemesanan mebel di yang berada di Bondowoso. Semua mebel yang diperlukan tersedia diaplikasi ini.
 
 ## Tech Stack
