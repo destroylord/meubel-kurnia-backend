@@ -22,7 +22,7 @@
 ## About Project
 
 ![Image Preview](public/assets/img/Dashboard-admin.png)
-Mebel Kurnia adalaha aplikasi pemesanan mebel di yang berada di Bondowoso. Semua mebel yang diperlukan tersedia diaplikasi ini.
+Mebel Kurnia adalah aplikasi pemesanan mebel di yang berada di Bondowoso. Semua mebel yang diperlukan tersedia diaplikasi ini.
 
 ## Tech Stack
 
