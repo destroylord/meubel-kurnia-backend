@@ -15,11 +15,13 @@ $ex = mysqli_query($conn, $sql);
 if ($ex) {
     $response = [
         'status' => 200,
-        'msg'    => 'Successfuly created data'
+        'msg'    => 'Successfuly checkout'
     ];
 } else {
     $response = [
         'status' => 201,
-        'msg'    => 'Failed created data'
+        'msg'    => 'Failed checkout'
     ];
 }
+
+echo json_encode($response);
