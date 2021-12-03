@@ -6,6 +6,7 @@
       <?php include_once '../layouts/utilities/script.php'; ?>
 
       <script>
+
           // update
         $(document).on("click","#update", function(e){
           e.preventDefault();
@@ -22,8 +23,9 @@
             },
             dataType: 'JSON',
             success: function(res) {
-              // location.reload();
+              $('.modal').modal("hide");
               toastr.success(res.msg, res.title)
+              location.reload();
             }
           })
         })
@@ -57,6 +59,7 @@
                   success: function(res) {
                     $('.modal').modal("hide");
                     toastr.success(res.msg, res.title);
+                    location.reload();
                   },error: function (err) {
                     console.log(err);
                   }

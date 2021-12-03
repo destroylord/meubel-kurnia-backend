@@ -24,7 +24,7 @@
                               <div class="col-sm-12">
                                     <div class="card-box table-responsive">
                                       <p class="text-muted font-13 m-b-30">
-                                          <a href="http://localhost:8080/resources/furniture/create.php" class="btn btn-success btn-sm">
+                                          <a href="<?=url()?>/resources/furniture/create.php" class="btn btn-success btn-sm">
                                             Tambah
                                           </a>
                                       </p>
