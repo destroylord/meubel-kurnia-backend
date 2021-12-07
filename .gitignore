@@ -1,2 +1,5 @@
-core/config.php
-vendor/*
+# ignore config
+/core/config.php
+
+# ignore vendor
+/vendor/*
