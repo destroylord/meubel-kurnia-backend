@@ -8,8 +8,7 @@ include_once $_SERVER['DOCUMENT_ROOT'].'/core/config.php';
     $token          = bin2hex(random_bytes(16));
     $time           = date("Y-m-d H:i:s");
 
-
-    if (empty($username) | empty($password)) {
+    if (empty($username) || empty($password)) {
         $response = [
             'status' => 422,
             'msg'    => 'Required is field username & password'
@@ -20,7 +19,8 @@ include_once $_SERVER['DOCUMENT_ROOT'].'/core/config.php';
             'status' => 422,
             'msg'    => 'Required is field username'
         ];
-    } elseif(empty($password) || (!empty($username))) {
+    } 
+    elseif(empty($password)) {
         $response = [
             'status' => 422,
             'msg'    => 'Required is field password'
@@ -43,5 +43,5 @@ include_once $_SERVER['DOCUMENT_ROOT'].'/core/config.php';
         }
     }
      
-    header('Content-Type: application/json');
-    echo json_encode($response);
+    header('Content-Type: application/json', false);
+    echo json_encode($response, false);

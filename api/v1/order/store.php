@@ -6,12 +6,11 @@ $kode           = $_POST['kode'];
 $id_checkout    = $_POST['id_checkout'];
 $price          = $_POST['price'];
 $location       = $_POST['location'];
-$time           = date("d-m-Y H:i:s");
+$time           = date("Y-m-d H:i:s");
 
-$sql = "INSERT INTO orders(kode, id_checkout, price, location, created_at) VALUES('$kode', '$id_checkout', '$price', '$location', '2021-11-22 10:22:35')";
+$sql = "INSERT INTO orders(kode, id_checkout, price, location, created_at) VALUES('$kode', '$id_checkout', '$price', '$location', '$time')";
 
 $ex = mysqli_query($conn, $sql);
-
 
 if ($ex) {
     $response = [
@@ -20,10 +19,10 @@ if ($ex) {
     ];
 } else {
     $response = [
-        'status' => 201,
-        'msg'    => 'Failed orders'
+        'status' => 422,
+        'msg'    => 'Bad Request'
     ];
 }
 
-
+header('Content-Type: application/json', false);
 echo json_encode($response);
