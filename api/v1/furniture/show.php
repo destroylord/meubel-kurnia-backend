@@ -17,7 +17,7 @@ if ($data) {
     ];
 }else {
     $response = [
-        'status' => 201,
+        'status' => 400,
         'msg'    => 'Bad Request',
     ];
 }
