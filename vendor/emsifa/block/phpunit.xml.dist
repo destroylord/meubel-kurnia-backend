@@ -1,7 +1,0 @@
-<phpunit bootstrap="vendor/autoload.php">
-    <testsuites>
-        <testsuite name="Block">
-            <file>tests/BlockTest.php</file>
-        </testsuite>
-    </testsuites>
-</phpunit>

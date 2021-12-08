@@ -1,1 +1,0 @@
-<div class="message-component"><?= $message ?></div>

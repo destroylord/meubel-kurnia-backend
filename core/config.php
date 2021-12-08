@@ -3,8 +3,14 @@
 // open session
 session_start();
 
+define("HOST", "localhost");
+define("USERNAME", "u8895984_mebel_kurnia_root");
+define("PASSWORD", "iOo(uv?{yooa");
+define("DB", "u8895984_mebel_kurnia");
+
+
 // Connection
-$conn = mysqli_connect("localhost", "root", "", "mebel_kurnia");
+$conn = mysqli_connect("HOST", "USERNAME", "PASSWORD", "DB");
 
 // url
 function url()
