@@ -10,7 +10,7 @@ define("DB", "u8895984_mebel_kurnia");
 
 
 // Connection
-$conn = mysqli_connect("HOST", "USERNAME", "PASSWORD", "DB");
+$conn = mysqli_connect(HOST, USERNAME, PASSWORD, DB);
 
 // url
 function url()
