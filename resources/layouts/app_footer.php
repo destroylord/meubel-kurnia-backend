@@ -6,7 +6,6 @@
       <?php include_once '../layouts/utilities/script.php'; ?>
 
       <script>
-
           // update
         $(document).on("click","#update", function(e){
           e.preventDefault();

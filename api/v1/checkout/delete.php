@@ -7,7 +7,7 @@ $method = $_SERVER['REQUEST_METHOD'];
 
 if ($method == 'DELETE') {
         
-    $id     = $_POST['id_checkout'];
+    $id     = $_GET['id_checkout'];
 
     $sql    = "DELETE FROM checkouts WHERE id_checkout = '$id'";
 
@@ -20,8 +20,8 @@ if ($method == 'DELETE') {
         ];
     } else {
         $response = [
-            'status' => 201,
-            'msg'   => "Failed Delete"
+            'status' => 500,
+            'msg'   => "Bad Request"
         ];
     }
 

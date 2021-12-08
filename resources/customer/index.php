@@ -41,7 +41,14 @@
                                             $no = 1;
                                             $sql = mysqli_query($conn, "SELECT * FROM orders ORDER BY created_at desc");
                                             $ex = mysqli_fetch_row($sql);
-
+                                            
+                                              while ($data = $ex) {?>
+                                               <tr>
+                                                 <td><?= $no++; ?></td>
+                                               </tr>
+                                               
+                                            <?php
+                                              }
                                             ?>
                                         </tbody>
                                       </table>

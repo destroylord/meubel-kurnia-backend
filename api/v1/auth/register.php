@@ -8,17 +8,6 @@ include_once $_SERVER['DOCUMENT_ROOT'].'/core/config.php';
     $token          = bin2hex(random_bytes(16));
     $time           = date("Y-m-d H:i:s");
 
-    if ( $username == "" && is_string($password == "")) {
-         $code = 422;
-         $response = [
-            'message'    => 'The given data was invalid.',
-            'error'      => [
-                'username' => 'Username is required',
-                'password' => 'Password is required'
-            ]
-        ];
-    } 
-
     if (empty($username)) {
         $code = 422;
          $response = [
@@ -30,6 +19,16 @@ include_once $_SERVER['DOCUMENT_ROOT'].'/core/config.php';
     } 
 
     if(empty($password)) {
+        $code = 422;
+         $response = [
+            'message'    => 'The given data was invalid.',
+            'error'      => [
+                'password' => 'Password is required',
+            ]
+        ];
+    } 
+
+    if(empty($no_handphone)) {
         $code = 422;
          $response = [
             'message'    => 'The given data was invalid.',
