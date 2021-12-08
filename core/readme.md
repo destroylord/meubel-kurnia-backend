@@ -1,12 +1,13 @@
+```php
 <?php
 
 // open session
 session_start();
 
 define("HOST", "localhost");
-define("USERNAME", "u8895984_mebel_kurnia_root");
-define("PASSWORD", "iOo(uv?{yooa");
-define("DB", "u8895984_mebel_kurnia");
+define("USERNAME", "root");
+define("PASSWORD", "");
+define("DB", "mebel_kurnia");
 
 
 // Connection
@@ -16,7 +17,7 @@ $conn = mysqli_connect(HOST, USERNAME, PASSWORD, DB);
 function url()
 {
     return sprintf(
-        "%s://%s/",
+        "%s://%s:8080/",
         isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] != 'off' ? 'https' : 'http',
         $_SERVER['SERVER_NAME'],
     );
@@ -34,4 +35,7 @@ function flash_message($name, $text = ''){
     return '';
 }
 
+
+
+```
 
