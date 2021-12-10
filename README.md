@@ -33,10 +33,10 @@ Kami memilih framework bootstrap untuk menggunakan tampilan pada aplikasi ini, d
 ## Team
 
 1. Fahmi Dafrin Maulana     - Web Developer
-2. Eggi Permanya Sunarya    - Mobile Application
-3. Sekar Maulia             - UI/UX Designer
-4. Nelly Mauliyah           - Quality Assurance
+2. Eggi Permana Sunarya    - Mobile Application
+3. Sekar Mauliyah           - UI/UX Designer
+4. Nelly Mauliya            - Quality Assurance
 
 ## Contact
 
-Nelly Mauliyah - nelly@example.com
+Nelly Mauliyah - nellymaulia679@gmail.com
