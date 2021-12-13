@@ -34,8 +34,10 @@ Mebel Kurnia adalah aplikasi pemesanan mebel di yang berada di Bondowoso. Semua 
 
 ### Login
 
+```sheell
 username: admin
 password: adinda8
+```
 
 ## Tech Stack
 
