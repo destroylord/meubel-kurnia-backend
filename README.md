@@ -19,10 +19,23 @@
   </p>
 </div>
 
-## About Project
+## Tentang Project
 
 ![Image Preview](public/assets/img/Dashboard-admin.png)
 Mebel Kurnia adalah aplikasi pemesanan mebel di yang berada di Bondowoso. Semua mebel yang diperlukan tersedia diaplikasi ini.
+
+## Instalasi
+
+1. Buatlah sebuah database di PMA(PhpMyAdmin)
+2. Import file database di folder ``db/mebel_kurnia.sql``
+3. Buatlah sebuah file config.php pada folder ``core`` kemudian ambil code dari README.md di folder core
+4. Buka terminal kemudian jalankan perintah ``php -S localhost:8080``
+5. Happy Coding :)
+
+### Login
+
+username: admin
+password: adinda8
 
 ## Tech Stack
 
