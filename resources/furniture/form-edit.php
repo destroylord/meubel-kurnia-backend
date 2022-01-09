@@ -52,7 +52,7 @@
                     </div>
                     <div class="form-group">
                         <label for="">Harga Barang * :</label>
-                        <input type="text" id="price" class="form-control" name="price" value="<?=$fetch['price']?>" required />
+                        <input type="text" id="price" class="form-control" name="price" value="<?=$data['price']?>" required />
                     </div>
                 </div>
             </div>
