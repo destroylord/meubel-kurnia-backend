@@ -37,7 +37,7 @@
 
         $ex = mysqli_query($conn, $sql);
         if ($sql) {
-            echo "success updated";
+            header("location:".url()."resources/furniture");exit;
         } else {
             echo "failed updated";
         }
