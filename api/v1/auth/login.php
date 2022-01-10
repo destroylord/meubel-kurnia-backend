@@ -24,7 +24,7 @@ if ($fetch['role'] == 2) {
             $response = [
                 'message'    => "Successfuly login!!",
                 'data'   => [
-                    'id' => $fetch['id'],
+                    'id' => (int)$fetch['id'],
                     'username' => $username
                 ]
             ];
