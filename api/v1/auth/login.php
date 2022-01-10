@@ -22,7 +22,10 @@ if ($fetch['role'] == 2) {
             $response = [
                 'status' => 200,
                 'msg'    => "Successfuly login!!",
-                'data'   => $username
+                'data'   => [
+                    'id' => $fetch['id'],
+                    'username' => $username
+                ]
             ];
 
         }else {
