@@ -30,9 +30,11 @@
                                               <th>No</th>
                                               <th>Kode</th>
                                               <th>Nama</th>
+                                              <th>Barang</th>
+                                              <th>Qty</th>
                                               <th>Alamat</th>
                                               <th>Total Harga</th>
-                                              <th>Status</th>
+                                              <th>Tanggal Beli</th>
                                             </tr>
                                           </thead>
                                         <tbody>
@@ -40,20 +42,25 @@
 
                                             $no = 1;
                                             $sql = mysqli_query($conn, 
-                                            "SELECT orders.id_order, orders.kode,users.username, orders.price, orders.location,orders.created_at FROM orders 
-                                            INNER JOIN checkouts ON orders.id_checkout = checkouts.id_checkout 
-                                            INNER JOIN users ON checkouts.id_user = users.id");
-                                            
-                                              while ($data = mysqli_fetch_assoc($sql)) {?>
+                                            "SELECT orders.*, users.username, furnitures.name FROM orders
+                                            INNER JOIN users
+                                                ON orders.id_user = users.id 
+                                            INNER JOIN furnitures 
+                                                ON orders.id_furniture = furnitures.id");
 
-                                                 <td><?= $no++; ?></td>
-                                                 <td><?= $data['kode']; ?></td>
-                                                 <td><?= $data['username']; ?></td>
-                                                 <td><?= $data['location']; ?></td>
-                                                 <td><?= $data['price']; ?></td>
-                                                 <td>
-                                                   
-                                                 </td>
+                                              while ($data = mysqli_fetch_assoc($sql)) {?> 
+
+                                              <tr>
+                                          
+                                                  <td><?= $no++; ?></td>
+                                                  <td><?= $data['kode']; ?></td>
+                                                  <td><?= $data['username']; ?></td>
+                                                  <td><?= $data['name']; ?></td>
+                                                  <td><?= $data['quantity']; ?></td>
+                                                  <td><?= $data['location']; ?></td>
+                                                  <td><?= $data['price']; ?></td>
+                                                  <td><?= $data['created_at']; ?></td>
+
                                                </tr>
                                                
                                             <?php
