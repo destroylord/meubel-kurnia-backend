@@ -8,20 +8,21 @@ $qty        = $_POST['quantity'];
 $time       = date("Y-m-d H:i:s");
 
 
-$sql = "INSERT INTO checkouts(id_user, id_furniture, quantity, created_at)VALUES('5', '2', '$qty','$time')";
+$sql = "INSERT INTO checkouts(id_user, id_furniture, quantity, created_at)VALUES('$user', '$furniture', '$qty','$time')";
 
 $ex = mysqli_query($conn, $sql);
 
 if ($ex) {
+    $code = 200;
     $response = [
-        'status' => 200,
-        'msg'    => 'Successfuly checkout'
+        'message'    => 'Successfuly checkout'
     ];
 } else {
+    $code = 500;
     $response = [
-        'status' => 404,
-        'msg'    => 'Not Found'
+        'message'    => 'Bad Request'
     ];
 }
 
+header('Content-Type: application/json', false, $code);
 echo json_encode($response);
