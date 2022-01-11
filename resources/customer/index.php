@@ -32,19 +32,28 @@
                                               <th>Nama</th>
                                               <th>Alamat</th>
                                               <th>Total Harga</th>
-                                              <th rowspan="">Action</th>
+                                              <th>Status</th>
                                             </tr>
                                           </thead>
                                         <tbody>
                                           <?php
 
                                             $no = 1;
-                                            $sql = mysqli_query($conn, "SELECT * FROM orders ORDER BY created_at desc");
-                                            $ex = mysqli_fetch_row($sql);
+                                            $sql = mysqli_query($conn, 
+                                            "SELECT orders.id_order, orders.kode,users.username, orders.price, orders.location,orders.created_at FROM orders 
+                                            INNER JOIN checkouts ON orders.id_checkout = checkouts.id_checkout 
+                                            INNER JOIN users ON checkouts.id_user = users.id");
                                             
-                                              while ($data = $ex) {?>
-                                               <tr>
+                                              while ($data = mysqli_fetch_assoc($sql)) {?>
+
                                                  <td><?= $no++; ?></td>
+                                                 <td><?= $data['kode']; ?></td>
+                                                 <td><?= $data['username']; ?></td>
+                                                 <td><?= $data['location']; ?></td>
+                                                 <td><?= $data['price']; ?></td>
+                                                 <td>
+                                                   
+                                                 </td>
                                                </tr>
                                                
                                             <?php
